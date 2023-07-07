@@ -103,7 +103,7 @@ export default function Fab() {
           </Animated.View>
         </TouchableWithoutFeedback>
         <ActionButton style={translationStyles(false, true, dist)} icon="calendar" />
-        <ActionButton style={translationStyles(true, true, middleDist)} icon="share-google" />
+        <ActionButton style={translationStyles(true, true, middleDist)} icon="search" />
         <ActionButton style={translationStyles(true, false, dist)} icon="gear" />
       </View>
     </View>
@@ -120,7 +120,6 @@ const CircleStyle = {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: Colors.accent,
   },
   fabContainer: {
@@ -136,13 +135,13 @@ const styles = StyleSheet.create({
   expandingCircle: {
     ...CircleStyle,
     // transform: [{ scale: 8 }],
-    backgroundColor: Colors.red,
+    //backgroundColor: Colors.red,
     position: 'absolute',
     zIndex: -1,
   },
   actionBtn: {
     ...CircleStyle,
-    backgroundColor: Colors.darkRed,
+    backgroundColor: Colors.skyBlue,
     position: 'absolute',
     zIndex: -1,
   },

@@ -30,6 +30,10 @@ import DetailsScreen from './screens/shop/DetailsScreen';
 import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
 import Fab from './screens/fab/Fab';
 import DrawerNav1 from './screens/drawer/drawer1/DrawerNav1';
+import SplashScreen from './screens/SplashScreen';
+import WelcomeScreen from './screens/WelcomeScreen';
+import ConnexionScreen from './screens/ConnexionScreen';
+import RegisterScreen from './screens/RegisterScreen';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -64,8 +68,21 @@ const Stack = createSharedElementStackNavigator();
 const RootStack = () => {
   return (
     <Stack.Navigator screenOptions={options}>
-      <Stack.Screen name="Home" component={Home}
-        options={{ title: 'React-Native Ui', headerShown: true }} />
+      <Stack.Screen
+        name="Splash"
+        options={{headerShown: false}}
+        component={SplashScreen}
+      />
+
+      <Stack.Screen name="Welcome" component={WelcomeScreen} />
+      <Stack.Screen name="Register" component={RegisterScreen} />
+      <Stack.Screen name="Connexion" component={ConnexionScreen} />
+      <Stack.Screen name="Drawer1" component={DrawerNav1} />
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{title: 'React-Native Ui', headerShown: true}}
+      />
       <Stack.Screen name="Tab1" component={AnimTab1} />
       <Stack.Screen name="Tab2" component={AnimTab2} />
       <Stack.Screen name="Tab3" component={AnimTab3} />
@@ -75,15 +92,16 @@ const RootStack = () => {
       <Stack.Screen name="List" component={ListScreen} />
       <Stack.Screen name="Screen" component={Screen} />
       <Stack.Screen name="Products" component={ProductsList} />
-      <Stack.Screen name="Details" component={DetailsScreen}
+      <Stack.Screen
+        name="Details"
+        component={DetailsScreen}
         options={{
           cardStyleInterpolator: CardStyleInterpolators.forVerticalIOS,
         }}
       />
       <Stack.Screen name="Fab" component={Fab} />
-      <Stack.Screen name="Drawer1" component={DrawerNav1} />
     </Stack.Navigator>
-  )
+  );
 }
 
 export default App;

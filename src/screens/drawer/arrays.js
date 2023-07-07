@@ -1,14 +1,57 @@
 import { Icons } from "../../components/Icons";
 import DrawerScreen from "../DrawerScreen";
+import ReceiveScreen from '../ReceiveScreen'
 import { colors } from "./constant";
 
 export const ScreensArray = [
-  { route: 'Home', label: 'Home', type: Icons.Feather, icon: 'home', component: DrawerScreen, notification: 0, },
-  { route: 'Inbox', label: 'My Inbox', type: Icons.Feather, icon: 'inbox', component: DrawerScreen, notification: 9, },
-  { route: 'Calendar', label: 'My Calendar', type: Icons.Feather, icon: 'calendar', component: DrawerScreen, notification: 4, },
-  { route: 'Documents', label: 'My Documents', type: Icons.Feather, icon: 'layers', component: DrawerScreen, notification: 0, },
-  { route: 'Activity', label: 'My Activity', type: Icons.Feather, icon: 'pie-chart', component: DrawerScreen, notification: 2, },
-  { route: 'Settings', label: 'Settings', type: Icons.Feather, icon: 'settings', component: DrawerScreen, notification: 0, },
+  {
+    route: 'Home',
+    label: 'Home',
+    type: Icons.Feather,
+    icon: 'home',
+    component: ReceiveScreen,
+    notification: 0,
+  },
+  {
+    route: 'Inbox',
+    label: 'My Inbox',
+    type: Icons.Feather,
+    icon: 'inbox',
+    component: DrawerScreen,
+    notification: 9,
+  },
+  {
+    route: 'Calendar',
+    label: 'My Calendar',
+    type: Icons.Feather,
+    icon: 'calendar',
+    component: DrawerScreen,
+    notification: 4,
+  },
+  {
+    route: 'Documents',
+    label: 'My Documents',
+    type: Icons.Feather,
+    icon: 'layers',
+    component: DrawerScreen,
+    notification: 0,
+  },
+  {
+    route: 'Activity',
+    label: 'My Activity',
+    type: Icons.Feather,
+    icon: 'pie-chart',
+    component: DrawerScreen,
+    notification: 2,
+  },
+  {
+    route: 'Settings',
+    label: 'Settings',
+    type: Icons.Feather,
+    icon: 'settings',
+    component: DrawerScreen,
+    notification: 0,
+  },
 ];
 
 export const ProjectsArray = [
